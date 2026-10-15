@@ -13,16 +13,16 @@
 
   <!-- Open Graph / Facebook / WhatsApp Preview -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aziznoviyanto.github.io/">
+  <meta property="og:url" content="https://mochamad-aziz-nuv.github.io/portofolio/">
   <meta property="og:title" content="Mochamad Aziz Noviyanto — Full-Stack Developer (Laravel & Flutter)">
   <meta property="og:description" content="7+ Tahun Pengalaman Membangun Backend Tangguh, Aplikasi Mobile Flutter, & Optimasi Database. Tersedia untuk Proyek Freelance (18:00 - 22:00 WIB).">
-  <meta property="og:image" content="assets/images/avatar.jpg">
+  <meta property="og:image" content="assets/images/aziz-real-studio.jpg">
 
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Mochamad Aziz Noviyanto — Full-Stack Developer">
   <meta property="twitter:description" content="Senior Full-Stack & Mobile Developer (Laravel, Flutter, MySQL, VPS). Tersedia untuk Proyek Freelance.">
-  <meta property="twitter:image" content="assets/images/avatar.jpg">
+  <meta property="twitter:image" content="assets/images/aziz-real-studio.jpg">
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='bold' fill='white'>AN</text></svg>">
@@ -235,11 +235,17 @@
               <div class="relative bg-white rounded-3xl p-6 shadow-xl border border-slate-200/90 card-hover">
                 
                 <!-- Card Header with Photo -->
-                <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-slate-200">
-                  <img src="assets/images/avatar.jpg" alt="Mochamad Aziz Noviyanto" class="w-full h-full object-cover object-top" loading="eager">
+                <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-slate-200 group">
+                  <img id="profile-img" src="assets/images/aziz-real-studio.jpg" alt="Mochamad Aziz Noviyanto" class="w-full h-full object-cover object-center transition-all duration-300" loading="eager">
                   
+                  <!-- Photo view switcher button -->
+                  <button id="photo-toggle-btn" type="button" class="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-lg bg-white/90 hover:bg-white text-slate-700 text-[11px] font-semibold backdrop-blur-md shadow-xs border border-slate-200/80 transition-all flex items-center space-x-1.5 cursor-pointer" title="Klik untuk berganti versi foto">
+                    <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    <span id="photo-toggle-label">Versi Cafe</span>
+                  </button>
+
                   <!-- Tag over photo -->
-                  <div class="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/80 shadow-xs flex items-center justify-between">
+                  <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/80 shadow-xs flex items-center justify-between">
                     <div>
                       <p class="text-xs font-bold text-slate-900">Mochamad Aziz Noviyanto</p>
                       <p class="text-[11px] text-slate-500 font-medium">S1 Sistem Informasi (UPN 'Veteran' Jatim)</p>
