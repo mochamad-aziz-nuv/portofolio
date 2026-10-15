@@ -165,7 +165,7 @@
                 <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <span>Aplikasi Mobile Flutter (Android & iOS)</span>
+                <span>Aplikasi Mobile Flutter (Android & iOS) <a href="demo-mobile.html" target="_blank" class="ml-1.5 px-2 py-0.5 rounded-full text-[11px] font-bold bg-teal-100 text-teal-800 hover:bg-teal-200 border border-teal-200 transition-colors inline-flex items-center">📱 Coba Demo App</a></span>
               </div>
               <div class="flex items-center space-x-2.5 text-sm text-slate-700">
                 <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
@@ -618,12 +618,18 @@
               </div>
             </div>
 
-            <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <div class="px-6 pb-6 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
               <span class="text-xs text-slate-500 font-medium">Status: Selesai Tepat Waktu</span>
-              <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="nagrofaqua">
-                Lihat Detail Kasus
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-              </button>
+              <div class="flex items-center space-x-2">
+                <a href="demo-mobile.html" target="_blank" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-teal-600 hover:bg-teal-700 shadow-xs transition-colors group">
+                  <svg class="w-3.5 h-3.5 mr-1 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                  Coba Demo App
+                </a>
+                <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="nagrofaqua">
+                  Detail Kasus
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1408,9 +1414,15 @@
       <!-- Modal Footer -->
       <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
         <span class="text-xs text-slate-500">Ingin membangun sistem serupa?</span>
-        <a href="#kontak" onclick="document.getElementById('modal-close-btn').click()" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
-          Diskusikan Sekarang
-        </a>
+        <div class="flex items-center space-x-2">
+          <a id="modal-demo-link" href="demo-mobile.html" target="_blank" class="hidden px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-teal-600 hover:bg-teal-700 transition-colors flex items-center">
+            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            Live Demo App
+          </a>
+          <a href="#kontak" onclick="document.getElementById('modal-close-btn').click()" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+            Diskusikan Sekarang
+          </a>
+        </div>
       </div>
 
     </div>

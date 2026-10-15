@@ -171,6 +171,16 @@ document.addEventListener('DOMContentLoaded', () => {
           </li>`
         ).join('');
 
+        // Show/hide live demo button for Nagrofaqua
+        const modalDemoLink = document.getElementById('modal-demo-link');
+        if (modalDemoLink) {
+          if (projId === 'nagrofaqua') {
+            modalDemoLink.classList.remove('hidden');
+          } else {
+            modalDemoLink.classList.add('hidden');
+          }
+        }
+
         modalBackdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
