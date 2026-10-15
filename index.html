@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Mochamad Aziz Noviyanto | Senior Full-Stack Developer (Laravel & Flutter)</title>
+  <meta name="title" content="Mochamad Aziz Noviyanto | Senior Full-Stack Developer (Laravel & Flutter)">
+  <meta name="description" content="Portofolio resmi Mochamad Aziz Noviyanto. Senior Full-Stack & Mobile Developer dengan 7+ tahun pengalaman. Spesialis Laravel, Flutter, optimasi query database, dan infrastruktur server VPS. Tersedia untuk proyek freelance & remote.">
+  <meta name="author" content="Mochamad Aziz Noviyanto">
+  <meta name="keywords" content="Mochamad Aziz Noviyanto, Full-Stack Developer, Freelance Programmer, Laravel Developer, Flutter Developer, CodeIgniter, Database Optimization, Sidoarjo, Surabaya, Jawa Timur, Remote Programmer">
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aziznoviyanto.github.io/">
+  <meta property="og:title" content="Mochamad Aziz Noviyanto — Full-Stack Developer (Laravel & Flutter)">
+  <meta property="og:description" content="7+ Tahun Pengalaman Membangun Backend Tangguh, Aplikasi Mobile Flutter, & Optimasi Database. Tersedia untuk Proyek Freelance (18:00 - 22:00 WIB).">
+  <meta property="og:image" content="assets/images/avatar.jpg">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Mochamad Aziz Noviyanto — Full-Stack Developer">
+  <meta property="twitter:description" content="Senior Full-Stack & Mobile Developer (Laravel, Flutter, MySQL, VPS). Tersedia untuk Proyek Freelance.">
+  <meta property="twitter:image" content="assets/images/avatar.jpg">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='bold' fill='white'>AN</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 w-full nav-blur border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
+            AN
+          </div>
+          <div>
+            <span class="text-base font-bold text-slate-900 tracking-tight block group-hover:text-blue-600 transition-colors">
+              Aziz Noviyanto<span class="text-blue-600">.</span>
+            </span>
+            <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider block">
+              Full-Stack & Mobile Dev
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+          <a href="#tentang" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Tentang</a>
+          <a href="#layanan" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Layanan</a>
+          <a href="#proyek" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Proyek</a>
+          <a href="#keahlian" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Keahlian</a>
+          <a href="#pengalaman" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Pengalaman</a>
+          <a href="#ketersediaan" class="desktop-nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-colors">Ketersediaan</a>
+        </nav>
+
+        <!-- Right Quick Action -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+            <span>Tersedia Freelance (Malam)</span>
+          </div>
+          <a href="#kontak" class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow transition-all">
+            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            Hubungi Saya
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white/95 px-4 pt-2 pb-4 space-y-1">
+      <a href="#tentang" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Tentang</a>
+      <a href="#layanan" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Layanan Freelance</a>
+      <a href="#proyek" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Proyek & Portofolio</a>
+      <a href="#keahlian" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Keahlian Teknis</a>
+      <a href="#pengalaman" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Pengalaman Kerja</a>
+      <a href="#ketersediaan" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Ketersediaan Kerja</a>
+      <div class="pt-3 border-t border-slate-100">
+        <a href="#kontak" class="mobile-nav-link block w-full text-center px-4 py-2.5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700">
+          Mulai Diskusi Proyek (WhatsApp)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="tentang" class="relative pt-10 pb-16 md:pt-16 md:pb-24 bg-grid-pattern overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Copywriting -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Availability Pill -->
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold shadow-xs">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 pulse-dot"></span>
+              <span>Available for Remote / Part-Time Work (18:00 – 22:00 WIB)</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.18]">
+              Senior Full-Stack Developer <br class="hidden sm:inline">
+              <span class="text-gradient-primary">Spesialis Laravel & Flutter</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Halo! Saya <strong class="text-slate-900 font-semibold">Mochamad Aziz Noviyanto</strong>, lulusan S1 Sistem Informasi dengan <span class="text-blue-600 font-semibold underline decoration-blue-200 decoration-2">7+ tahun pengalaman</span> membangun arsitektur backend tangguh berbasis Laravel & CodeIgniter, penulisan optimasi query database kompleks, serta aplikasi mobile modern dengan Flutter.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+              <div class="flex items-center space-x-2.5 text-sm text-slate-700">
+                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Backend Laravel & API Berperforma Tinggi</span>
+              </div>
+              <div class="flex items-center space-x-2.5 text-sm text-slate-700">
+                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Aplikasi Mobile Flutter (Android & iOS)</span>
+              </div>
+              <div class="flex items-center space-x-2.5 text-sm text-slate-700">
+                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Optimasi Raw Query Database Lemot</span>
+              </div>
+              <div class="flex items-center space-x-2.5 text-sm text-slate-700">
+                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Setup Server VPS & Multi-PHP Nginx</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-4">
+              <a href="#kontak" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20 transition-all group">
+                <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.947.882 2.796.882 3.183 0 5.769-2.587 5.77-5.768.001-3.181-2.585-5.767-5.77-5.767zm7.521 5.766c-.002 4.148-3.374 7.52-7.521 7.52-.942 0-2.311-.322-3.364-.913l-4.667 1.223 1.246-4.549c-.655-1.127-1.002-2.327-1.001-3.281.002-4.148 3.375-7.52 7.522-7.52 4.148 0 7.52 3.372 7.522 7.52z"/>
+                </svg>
+                Konsultasi Proyek (WhatsApp)
+              </a>
+
+              <a href="#proyek" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 shadow-xs transition-all">
+                <svg class="w-5 h-5 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                </svg>
+                Lihat Proyek & Bukti Kerja
+              </a>
+
+              <button onclick="window.print()" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-3.5 rounded-xl font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" title="Cetak atau Simpan Halaman sebagai PDF">
+                <svg class="w-5 h-5 mr-1.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+                Print CV
+              </button>
+            </div>
+
+            <!-- Contact badges -->
+            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+              <span class="inline-flex items-center">
+                <svg class="w-4 h-4 text-slate-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Sidoarjo, Jawa Timur (Remote WFH)
+              </span>
+              <span class="inline-flex items-center">
+                <svg class="w-4 h-4 text-slate-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                nuv.noviyanto@gmail.com
+              </span>
+              <a href="https://www.linkedin.com/in/aziz-noviyanto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:underline">
+                <svg class="w-4 h-4 mr-1 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                linkedin.com/in/aziz-noviyanto
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Profile Card Showcase -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm sm:max-w-md">
+              
+              <!-- Subtle decorative aura -->
+              <div class="absolute -top-6 -left-6 w-72 h-72 bg-blue-100 rounded-full filter blur-3xl opacity-60 pointer-events-none"></div>
+              <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-indigo-100 rounded-full filter blur-3xl opacity-60 pointer-events-none"></div>
+
+              <!-- Main Card Container -->
+              <div class="relative bg-white rounded-3xl p-6 shadow-xl border border-slate-200/90 card-hover">
+                
+                <!-- Card Header with Photo -->
+                <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-slate-200">
+                  <img src="assets/images/avatar.jpg" alt="Mochamad Aziz Noviyanto" class="w-full h-full object-cover object-top" loading="eager">
+                  
+                  <!-- Tag over photo -->
+                  <div class="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/80 shadow-xs flex items-center justify-between">
+                    <div>
+                      <p class="text-xs font-bold text-slate-900">Mochamad Aziz Noviyanto</p>
+                      <p class="text-[11px] text-slate-500 font-medium">S1 Sistem Informasi (UPN 'Veteran' Jatim)</p>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 text-[11px] font-bold border border-blue-200">
+                      7+ Tahun
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Floating Micro Badges -->
+                <div class="space-y-3">
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                    <div class="flex items-center space-x-2.5">
+                      <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs">
+                        PHP
+                      </div>
+                      <div>
+                        <p class="text-xs font-semibold text-slate-800">Laravel & CodeIgniter</p>
+                        <p class="text-[11px] text-slate-500">Arsitektur Backend Skala Enterprise</p>
+                      </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-700">Expert</span>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                    <div class="flex items-center space-x-2.5">
+                      <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-xs">
+                        FLT
+                      </div>
+                      <div>
+                        <p class="text-xs font-semibold text-slate-800">Flutter & Mobile App</p>
+                        <p class="text-[11px] text-slate-500">Android & iOS dari nol terintegrasi API</p>
+                      </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-700">Advanced</span>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+                    <div class="flex items-center space-x-2.5">
+                      <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">
+                        SQL
+                      </div>
+                      <div>
+                        <p class="text-xs font-semibold text-slate-800">Raw Query Optimizer</p>
+                        <p class="text-[11px] text-slate-500">MySQL, MariaDB, SQL Server</p>
+                      </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-emerald-700">High-Speed</span>
+                  </div>
+                </div>
+
+                <!-- Card Footer Action -->
+                <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500">Jam Freelance Khusus:</span>
+                  <span class="font-semibold text-slate-900 bg-slate-100 px-2.5 py-1 rounded-md">
+                    18.00 – 22.00 WIB
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS & TRUST BAR -->
+    <section class="border-y border-slate-200 bg-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl font-extrabold text-blue-600">7+ Tahun</p>
+            <p class="text-xs sm:text-sm font-semibold text-slate-700">Pengalaman Nyata</p>
+            <p class="text-[11px] text-slate-500">Bukan sekadar teori, teruji di sistem instansi & swasta</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Repeat Order</p>
+            <p class="text-xs sm:text-sm font-semibold text-slate-700">Kepercayaan Klien</p>
+            <p class="text-[11px] text-slate-500">Klien puas & mempercayakan ekspansi aplikasi mobile</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Full-Stack</p>
+            <p class="text-xs sm:text-sm font-semibold text-slate-700">End-to-End Delivery</p>
+            <p class="text-[11px] text-slate-500">Analisis ➔ Database ➔ API ➔ Mobile ➔ Server VPS</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Disiplin</p>
+            <p class="text-xs sm:text-sm font-semibold text-slate-700">Manajemen Waktu</p>
+            <p class="text-[11px] text-slate-500">Terbiasa sistem tiket (Jira/Trello), transparan & on-time</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY HIRE ME / VALUE PROPOSITION -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Nilai Tambah untuk Calon Klien
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            Mengapa Memilih Saya untuk Proyek Freelance Anda?
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Mencari developer freelance yang tidak hanya bisa menulis kode, tetapi juga paham analisis kebutuhan bisnis, arsitektur database, dan deployment server mandiri.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Bekerja Mandiri & Solutif</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Anda tidak perlu repot melakukan supervisi teknis mikro. Dari tahap perancangan database, penulisan API, hingga deployment server, saya terbiasa mengeksekusi proyek secara mandiri dan bertanggung jawab penuh.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Optimasi Database & Performa</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Aplikasi Anda mulai lambat karena query yang menumpuk? Saya memiliki spesialisasi dalam meracik <em>complex raw query</em> dan indexing database (MySQL/MariaDB/SQL Server) agar aplikasi kembali melesat cepat.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Jam Malam Fokus & Terjadwal</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Dengan jadwal kerja freelance resmi (18:00 – 22:00 WIB, Senin – Minggu), waktu pengerjaan proyek Anda teralokasi khusus tanpa bentrok dengan kesibukan siang, didukung komunikasi yang responsif.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LAYANAN FREELANCE (SERVICES) -->
+    <section id="layanan" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Services & Expertise
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            Layanan Freelance yang Siap Saya Kerjakan
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Pilih kebutuhan sistem Anda. Saya siap membantu dari awal perancangan hingga aplikasi siap digunakan oleh pengguna.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Service 1 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                &lt;/&gt;
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Backend & RESTful API (Laravel)</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Pembangunan arsitektur backend yang aman, terstruktur, dan scalable menggunakan framework Laravel / CodeIgniter / Java Spring Boot untuk melayani jutaan request data.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Laravel</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">REST API</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">JWT / Sanctum</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Spring Boot</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                📱
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Aplikasi Mobile Flutter (Android & iOS)</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Pengembangan aplikasi mobile dari nol dengan Flutter. Tampilan modern, responsif, dan terintegrasi mulus dengan backend API sistem Anda.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Flutter</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Dart</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">State Management</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Android SDK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                ⚡
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Optimasi Query & Troubleshooting Database</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Mendiagnosis dan memperbaiki bottleneck database yang membuat sistem lambat. Penulisan raw query kompleks, perbaikan indexing, dan struktur relasi database.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">MySQL / MariaDB</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">SQL Server</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Raw Query</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Indexing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                ⚙️
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Setup Server VPS & Multi-Version PHP</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Konfigurasi server produksi Linux (Ubuntu/Debian), Nginx web server, SSL, domain, dan setup multi-versi PHP dalam 1 server (misal: CI2 PHP 5.6 + Laravel PHP 8.2).
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">VPS Linux</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Nginx</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Multi-PHP</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Laragon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                🛠️
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Maintenance & Upgrade Fitur Legacy</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Melanjutkan proyek yang terhenti, memperbaiki bug sistem yang ada, memperbarui fitur baru pada aplikasi lama berbasis CodeIgniter 2/4 atau Angular.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">CodeIgniter 2/4</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Bug Fixing</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Refactoring</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Angular</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+                🔗
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Integrasi Sistem & Pihak Ketiga (3rd Party)</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Menghubungkan aplikasi web/mobile Anda dengan Payment Gateway (Midtrans/Xendit), WhatsApp Gateway, SMS OTP, atau API pihak ketiga lainnya.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <span class="text-xs font-semibold text-slate-500 block mb-2">Teknologi Terkait:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Payment Gateway</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">Webhook</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">WA API</span>
+                <span class="px-2 py-0.5 bg-white text-slate-700 text-[11px] font-medium rounded border border-slate-200">OAuth</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROYEK & BUKTI KERJA (PORTFOLIO SHOWCASE) -->
+    <section id="proyek" class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+              Real-World Portfolio
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+              Proyek Pilihan & Studi Kasus
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-1 max-w-xl">
+              Berikut adalah beberapa proyek nyata yang telah saya bangun, mencakup sistem manajemen skala instansi hingga aplikasi mobile terintegrasi.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="flex flex-wrap gap-2 mt-6 md:mt-0 bg-slate-200/70 p-1.5 rounded-xl text-xs font-semibold">
+            <button class="filter-btn px-3.5 py-1.5 rounded-lg bg-blue-600 text-white shadow-xs transition-all" data-filter="all">Semua</button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 hover:bg-slate-100 transition-all" data-filter="laravel">Laravel & Backend</button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 hover:bg-slate-100 transition-all" data-filter="flutter">Mobile Flutter</button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-lg bg-white text-slate-600 hover:bg-slate-100 transition-all" data-filter="database">Database & Server</button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Project 1: PT. Nagrofaqua (Featured Repeat Client) -->
+          <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs card-hover flex flex-col justify-between" data-category="laravel flutter database">
+            <div>
+              <div class="relative aspect-video overflow-hidden bg-slate-100">
+                <img src="assets/images/project-tambak.jpg" alt="Aplikasi Tambak Udang PT Nagrofaqua" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+                
+                <!-- Status Badge -->
+                <div class="absolute top-3 right-3 flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-white text-xs font-semibold shadow-xs">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Repeat Order Client</span>
+                </div>
+
+                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/80 backdrop-blur-md text-white text-xs font-mono">
+                  Freelance Project (2024 – Awal 2025)
+                </div>
+              </div>
+
+              <div class="p-6">
+                <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                  <span>PT. Nagrofaqua</span>
+                  <span class="font-medium text-blue-600">Full-Stack & Mobile</span>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                  Sistem Manajemen Tambak Udang & Mobile App Monitoring
+                </h3>
+
+                <p class="text-sm text-slate-600 line-clamp-3 mb-4 leading-relaxed">
+                  Menyelesaikan maintenance sistem web manajemen tambak berbasis CodeIgniter tepat waktu. Karena kepuasan hasil kerja, klien memberikan <em>repeat order</em> untuk merancang & membangun aplikasi mobile baru dari nol menggunakan <strong>Flutter</strong> yang diintegrasikan dengan backend <strong>Laravel REST API</strong>.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">Flutter</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200">Laravel API</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200">CodeIgniter</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Status: Selesai Tepat Waktu</span>
+              <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="nagrofaqua">
+                Lihat Detail Kasus
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: Pemprov Jawa Timur -->
+          <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs card-hover flex flex-col justify-between" data-category="laravel database">
+            <div>
+              <div class="relative aspect-video overflow-hidden bg-slate-100">
+                <img src="assets/images/project-pemprov.jpg" alt="Sistem Informasi Pemprov Jawa Timur" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+                
+                <div class="absolute top-3 right-3 flex items-center space-x-1.5 px-3 py-1 rounded-full bg-blue-600/90 backdrop-blur-md text-white text-xs font-semibold shadow-xs">
+                  <span>Enterprise Government</span>
+                </div>
+
+                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/80 backdrop-blur-md text-white text-xs font-mono">
+                  Sep 2022 – Sekarang
+                </div>
+              </div>
+
+              <div class="p-6">
+                <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                  <span>Pemerintah Provinsi Jawa Timur</span>
+                  <span class="font-medium text-blue-600">Full-Stack Lead</span>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                  Arsitektur Backend & Optimasi Query Sistem Operasional
+                </h3>
+
+                <p class="text-sm text-slate-600 line-clamp-3 mb-4 leading-relaxed">
+                  Dipercaya penuh merancang arsitektur backend Laravel untuk kebutuhan operasional birokrasi, optimasi raw query data kompleks tanpa supervisi ketat, perbaikan UI/UX menu kantor, serta sukses mengkonfigurasi server produksi multi-versi PHP (CI 2 legacy + Laravel baru) tanpa konflik.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200">Laravel</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-50 text-purple-700 border border-purple-200">Multi-PHP Nginx</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">Query Optimization</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">VPS Management</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Status: Aktif & Terawat</span>
+              <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="pemprov-jatim">
+                Lihat Detail Kasus
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3: Java Spring Boot Microservice -->
+          <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs card-hover flex flex-col justify-between" data-category="database">
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span>Remote Team Collaboration (3 Bulan)</span>
+                <span class="font-medium text-indigo-600">Back-End Developer</span>
+              </div>
+
+              <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center font-bold text-sm mb-4">
+                ☕ JAVA
+              </div>
+
+              <h3 class="text-xl font-bold text-slate-900 mb-2">
+                Backend Microservice & API Component (Java Spring Boot)
+              </h3>
+
+              <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                Berkontribusi dalam pengembangan arsitektur dan komponen backend menggunakan Java Spring Boot. Bekerja remote terstruktur berbasis sistem tiketing Agile (Jira/Trello), code review ketat, dan integrasi API antartim secara transparan.
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-50 text-orange-700 border border-orange-200">Java</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">Spring Boot</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">REST API</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">Jira Ticketing</span>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Status: Project Collaboration</span>
+              <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="java-collaboration">
+                Lihat Detail Kasus
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 4: PT. Primavisi Globalindo -->
+          <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs card-hover flex flex-col justify-between" data-category="database">
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span>PT. Primavisi Globalindo (2018 – 2022)</span>
+                <span class="font-medium text-purple-600">Web & Android Programmer</span>
+              </div>
+
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm mb-4">
+                🏢 WEB
+              </div>
+
+              <h3 class="text-xl font-bold text-slate-900 mb-2">
+                Enterprise Business Platform & Modul Android Operasional
+              </h3>
+
+              <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                Mengembangkan fitur aplikasi internal menggunakan framework Angular, merancang query database skala besar berkala untuk penyusunan laporan operasional bisnis, serta menjaga stabilitas modul berbasis Android agar bebas crash.
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200">Angular</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-50 text-green-700 border border-green-200">Android</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">SQL Server</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">Complex Queries</span>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Status: 4 Tahun Berkelanjutan</span>
+              <button class="view-detail-btn inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800" data-project="primavisi">
+                Lihat Detail Kasus
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEAHLIAN TEKNIS (SKILLS MATRIX) -->
+    <section id="keahlian" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Skills & Competencies
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            Keahlian Teknis & Tech Stack
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Keahlian praktis yang telah diasah selama lebih dari 7 tahun dalam menangani aplikasi berskala kecil hingga enterprise.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Category 1: Backend -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 card-hover">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs">
+                BE
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Backend & Framework</h3>
+                <p class="text-xs text-slate-500">Core Expertise</p>
+              </div>
+            </div>
+            <ul class="space-y-2 text-sm text-slate-700">
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Laravel</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">PHP (5.6, 7.x, 8.x)</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">CodeIgniter (CI 2, CI 4)</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Java (Spring Boot)</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Proficient</span>
+              </li>
+              <li class="flex items-center justify-between py-1">
+                <span class="font-medium">RESTful API Design</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Advanced</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Mobile & Frontend -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 card-hover">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-xs">
+                FE
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Mobile & Frontend</h3>
+                <p class="text-xs text-slate-500">Cross-Platform</p>
+              </div>
+            </div>
+            <ul class="space-y-2 text-sm text-slate-700">
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Flutter</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Advanced</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Dart Language</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Advanced</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Angular Framework</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Experienced</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Tailwind CSS / HTML5</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Proficient</span>
+              </li>
+              <li class="flex items-center justify-between py-1">
+                <span class="font-medium">Android SDK / Java</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Experienced</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Database Management -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 card-hover">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">
+                DB
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Database Management</h3>
+                <p class="text-xs text-slate-500">Performance Tuning</p>
+              </div>
+            </div>
+            <ul class="space-y-2 text-sm text-slate-700">
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">MySQL & MariaDB</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Complex Raw Query</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Spesialis</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">SQL Server</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Proficient</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Index & Query Profiling</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Optimized</span>
+              </li>
+              <li class="flex items-center justify-between py-1">
+                <span class="font-medium">Database Schema Design</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 4: Server & Tools -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 card-hover">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs">
+                OPS
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Server & Workflow</h3>
+                <p class="text-xs text-slate-500">DevOps & Tools</p>
+              </div>
+            </div>
+            <ul class="space-y-2 text-sm text-slate-700">
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Nginx & Multi-PHP</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Expert</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">VPS Linux Management</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Advanced</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Laragon Environment</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Proficient</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-slate-200/60">
+                <span class="font-medium">Git Version Control</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">Advanced</span>
+              </li>
+              <li class="flex items-center justify-between py-1">
+                <span class="font-medium">Jira / Trello / Tiket</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-slate-200 text-slate-700">Agile Ready</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Languages -->
+        <div class="mt-8 p-4 rounded-xl bg-slate-100/80 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-700">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+            <span class="font-semibold text-slate-900">Kemampuan Bahasa:</span>
+            <span>Indonesia (Aktif / Native) • Inggris (Aktif / Technical Working Proficiency)</span>
+          </div>
+          <span class="text-slate-500">Siap berkomunikasi untuk klien lokal maupun internasional</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PENGALAMAN KERJA (CAREER TIMELINE) -->
+    <section id="pengalaman" class="py-16 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Professional Track Record
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            Pengalaman Kerja & Karir Profesional
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Perjalanan dedikasi selama lebih dari 7 tahun dalam dunia software development.
+          </p>
+        </div>
+
+        <div class="relative border-l-2 border-blue-200 ml-4 md:ml-32 space-y-12">
+          
+          <!-- Experience 1: Pemprov Jatim -->
+          <div class="relative pl-6 md:pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-xs"></div>
+            
+            <div class="md:absolute md:-left-36 md:top-1 text-xs font-mono font-bold text-blue-600 uppercase tracking-wide">
+              Sep 2022 – Sekarang
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                <h3 class="text-lg font-bold text-slate-900">
+                  Full-Stack Developer – Pemerintah Provinsi Jawa Timur
+                </h3>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 w-fit mt-1 sm:mt-0">
+                  Full-Time (On-site)
+                </span>
+              </div>
+              <p class="text-xs text-slate-500 mb-3">Surabaya, Jawa Timur</p>
+
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 font-bold">•</span>
+                  <span>Dipercaya penuh dalam merancang, membangun, dan memelihara arsitektur backend aplikasi berbasis Laravel untuk kebutuhan operasional pemerintahan.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 font-bold">•</span>
+                  <span>Secara mandiri mengolah dan menyajikan data melalui optimasi raw query database kompleks sesuai kebutuhan pihak manajemen tanpa perlu supervisi teknis yang ketat.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 font-bold">•</span>
+                  <span>Melakukan inisiatif optimasi UI/UX serta efisiensi menu sistem internal kantor, berhasil meningkatkan produktivitas dan kecepatan kerja pengguna.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 font-bold">•</span>
+                  <span>Melakukan konfigurasi dan pemeliharaan server produksi agar dapat menjalankan multi-versi PHP secara bersamaan (mengakomodasi sistem legacy CI 2 dan sistem baru berbasis Laravel) tanpa bentrok.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2: PT. Nagrofaqua -->
+          <div class="relative pl-6 md:pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow-xs"></div>
+            
+            <div class="md:absolute md:-left-36 md:top-1 text-xs font-mono font-bold text-emerald-600 uppercase tracking-wide">
+              2024 – Awal 2025
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                <h3 class="text-lg font-bold text-slate-900">
+                  Remote Full-Stack Developer – Freelance Project (PT. Nagrofaqua)
+                </h3>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 w-fit mt-1 sm:mt-0">
+                  Part-Time / Project-Based (Repeat Client)
+                </span>
+              </div>
+
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-start">
+                  <span class="text-emerald-500 mr-2 font-bold">•</span>
+                  <span>Bertanggung jawab atas maintenance dan pengembangan fitur pada aplikasi manajemen tambak udang berbasis CodeIgniter hingga selesai tepat waktu di awal tahun 2025.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-500 mr-2 font-bold">•</span>
+                  <span>Mendapatkan kepercayaan kembali dari klien (<em>repeat order</em>) karena kepuasan hasil kerja, untuk memperluas sistem ke versi aplikasi mobile.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-500 mr-2 font-bold">•</span>
+                  <span>Merancang dan membangun aplikasi mobile dari nol menggunakan Flutter, yang diintegrasikan dengan backend berbasis Laravel REST API.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3: Java Project Collaboration -->
+          <div class="relative pl-6 md:pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white shadow-xs"></div>
+            
+            <div class="md:absolute md:-left-36 md:top-1 text-xs font-mono font-bold text-indigo-600 uppercase tracking-wide">
+              Project (3 Bulan)
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                <h3 class="text-lg font-bold text-slate-900">
+                  Remote Back-End Developer – Project Collaboration
+                </h3>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 w-fit mt-1 sm:mt-0">
+                  Remote Team Collaboration
+                </span>
+              </div>
+
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-start">
+                  <span class="text-indigo-500 mr-2 font-bold">•</span>
+                  <span>Berkontribusi dalam pengembangan arsitektur dan komponen backend menggunakan framework Java Spring Boot.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-500 mr-2 font-bold">•</span>
+                  <span>Beradaptasi secara cepat dengan manajemen proyek modern berbasis Sistem Tiketing untuk penyelesaian task yang terstruktur dan transparan.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-500 mr-2 font-bold">•</span>
+                  <span>Berhasil menyelaraskan alur pengerjaan teknis dalam lingkungan kerja remote berskala tim terorganisir.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 4: PT. Primavisi Globalindo -->
+          <div class="relative pl-6 md:pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-xs"></div>
+            
+            <div class="md:absolute md:-left-36 md:top-1 text-xs font-mono font-bold text-slate-500 uppercase tracking-wide">
+              2018 – Agust 2022
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs card-hover">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                <h3 class="text-lg font-bold text-slate-900">
+                  Web & Android Programmer – PT. Primavisi Globalindo
+                </h3>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 w-fit mt-1 sm:mt-0">
+                  Full-Time (4 Tahun)
+                </span>
+              </div>
+
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-start">
+                  <span class="text-slate-400 mr-2 font-bold">•</span>
+                  <span>Mengembangkan dan melakukan pemeliharaan (maintenance) fitur serta menu baru pada aplikasi internal menggunakan framework Angular.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-slate-400 mr-2 font-bold">•</span>
+                  <span>Merancang penulisan query database secara berkala untuk kebutuhan penyusunan laporan operasional dan penajaman performa menu baru.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-slate-400 mr-2 font-bold">•</span>
+                  <span>Memastikan stabilitas jalannya aplikasi web dan modul berbasis Android agar sesuai dengan kebutuhan klien perusahaan.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PENDIDIKAN CARD -->
+        <div class="mt-14 max-w-2xl mx-auto bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex items-center space-x-5">
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 text-2xl">
+            🎓
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <h3 class="text-base font-bold text-slate-900">Strata 1 (S1) Sistem Informasi</h3>
+              <span class="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-slate-100 text-slate-700">Lulus 2018</span>
+            </div>
+            <p class="text-sm font-medium text-slate-600">UPN "Veteran" Jawa Timur (Studi 4 Tahun Tepat Waktu)</p>
+            <p class="text-xs text-slate-500 mt-1">
+              Menyelesaikan proyek tugas akhir pembuatan aplikasi bekerja sama dengan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dalam waktu 1 bulan kerja.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KETERSEDIAAN KERJA (AVAILABILITY INFO) -->
+    <section id="ketersediaan" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-xl">
+          
+          <!-- Background decorative accents -->
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                <span>Jadwal Khusus Freelance Aktif</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Informasi Ketersediaan Kerja (Availability)
+              </h2>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Saya menyediakan slot pengerjaan proyek freelance dengan jam kerja terfokus yang terjadwal rutin setiap hari. Cocok untuk Anda yang membutuhkan developer komitmen tinggi tanpa resiko proyek ditinggalkan di tengah jalan.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                  <p class="text-xs text-blue-300 font-semibold uppercase">Waktu Kerja Terjadwal</p>
+                  <p class="text-base font-bold text-white mt-1">Senin – Minggu</p>
+                  <p class="text-xs text-slate-300">Pukul 18.00 – 22.00 WIB (4 jam / hari)</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                  <p class="text-xs text-emerald-300 font-semibold uppercase">Mode Pengerjaan</p>
+                  <p class="text-base font-bold text-white mt-1">100% Remote (WFH)</p>
+                  <p class="text-xs text-slate-300">Workstation prima, koneksi stabil & daily update</p>
+                </div>
+              </div>
+
+              <div class="text-xs text-slate-300 pt-1">
+                <strong>Kelebihan Kerja Sama:</strong> Memiliki manajemen waktu yang matang, terbiasa alur kerja sistem tiket/task (Jira/Trello), serta siap bekerja mandiri dari analisis hingga deployment server.
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/10">
+              <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.947.882 2.796.882 3.183 0 5.769-2.587 5.77-5.768.001-3.181-2.585-5.767-5.77-5.767zm7.521 5.766c-.002 4.148-3.374 7.52-7.521 7.52-.942 0-2.311-.322-3.364-.913l-4.667 1.223 1.246-4.549c-.655-1.127-1.002-2.327-1.001-3.281.002-4.148 3.375-7.52 7.522-7.52 4.148 0 7.52 3.372 7.522 7.52z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold">Punya Proyek yang Siap Dikerjakan?</h3>
+              <p class="text-xs text-slate-300 mt-1 mb-4">
+                Diskusikan sekarang dan dapatkan estimasi teknis serta timeline pengerjaan yang realistis.
+              </p>
+              <a href="#kontak" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors shadow-sm text-sm">
+                Hubungi via WhatsApp
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KONTAK & FORM INQUIRY INTERAKTIF -->
+    <section id="kontak" class="py-16 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Get In Touch
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            Mulai Diskusi Kebutuhan Sistem Anda
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Isi form cepat di bawah ini untuk langsung membuka obrolan WhatsApp dengan format pesan yang telah tersusun rapi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Quick Contact Info -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+              <h3 class="font-bold text-slate-900 text-lg mb-4">Kontak Langsung</h3>
+              
+              <!-- WhatsApp / Phone -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                      WA
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-500 font-medium">WhatsApp / Telp</p>
+                      <p class="text-sm font-bold text-slate-900">0813-3552-0436</p>
+                    </div>
+                  </div>
+                  <div class="flex space-x-1.5">
+                    <button onclick="copyText('081335520436', 'Nomor WhatsApp')" class="p-2 text-slate-500 hover:text-blue-600 hover:bg-slate-200 rounded-lg transition-colors" title="Salin Nomor">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    </button>
+                    <a href="https://wa.me/6281335520436?text=Halo%20Mas%20Aziz,%20saya%20tertarik%20untuk%20diskusi%20proyek%20freelance" target="_blank" class="p-2 text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors" title="Buka WhatsApp">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Secondary Phone -->
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                      TEL
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-500 font-medium">Nomor Alternatif</p>
+                      <p class="text-sm font-bold text-slate-900">0878-5668-4550</p>
+                    </div>
+                  </div>
+                  <button onclick="copyText('087856684550', 'Nomor Alternatif')" class="p-2 text-slate-500 hover:text-blue-600 hover:bg-slate-200 rounded-lg transition-colors" title="Salin Nomor">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </button>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold">
+                      @
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-500 font-medium">Email Resmi</p>
+                      <p class="text-sm font-bold text-slate-900">nuv.noviyanto@gmail.com</p>
+                    </div>
+                  </div>
+                  <button onclick="copyText('nuv.noviyanto@gmail.com', 'Alamat Email')" class="p-2 text-slate-500 hover:text-blue-600 hover:bg-slate-200 rounded-lg transition-colors" title="Salin Email">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </button>
+                </div>
+
+                <!-- LinkedIn Profile -->
+                <a href="https://www.linkedin.com/in/aziz-noviyanto" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-colors group">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold">
+                      in
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-500 font-medium">LinkedIn Profile</p>
+                      <p class="text-sm font-bold text-slate-900 group-hover:text-blue-600">linkedin.com/in/aziz-noviyanto</p>
+                    </div>
+                  </div>
+                  <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200 text-xs text-blue-900 space-y-2">
+              <p class="font-bold flex items-center">
+                <svg class="w-4 h-4 text-blue-600 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Jaminan Kualitas Freelance:
+              </p>
+              <p class="text-slate-700">
+                Semua kode ditulis dengan standar rapi, didokumentasikan, dan siap diserahterimakan kepada tim internal Anda berikut panduan deployment.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive WhatsApp Generator Form -->
+          <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs">
+            <h3 class="font-bold text-slate-900 text-lg mb-1">Kirim Brief Proyek ke WhatsApp</h3>
+            <p class="text-xs text-slate-500 mb-6">Formulir ini akan otomatis merangkai pesan WhatsApp yang siap Anda kirimkan.</p>
+
+            <form id="wa-inquiry-form" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="client-name" class="block text-xs font-semibold text-slate-700 mb-1">Nama / Perusahaan Anda</label>
+                  <input type="text" id="client-name" placeholder="Contoh: Pak Budi / PT. Maju Jaya" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+
+                <div>
+                  <label for="client-project" class="block text-xs font-semibold text-slate-700 mb-1">Kebutuhan Proyek</label>
+                  <select id="client-project" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="Pembuatan Aplikasi Backend / REST API (Laravel)">Backend / REST API (Laravel)</option>
+                    <option value="Pembuatan Aplikasi Mobile Flutter (Android / iOS)">Aplikasi Mobile Flutter</option>
+                    <option value="Optimasi Query & Solusi Database Lemot">Optimasi Query Database Lemot</option>
+                    <option value="Konfigurasi Server VPS / Nginx / Multi-PHP">Setup Server VPS / Multi-PHP</option>
+                    <option value="Maintenance & Penambahan Fitur Sistem Existing">Maintenance & Fitur Aplikasi Lama</option>
+                    <option value="Konsultasi Teknis Lainnya">Konsultasi Teknis Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="client-budget" class="block text-xs font-semibold text-slate-700 mb-1">Estimasi Budget / Target Selesai (Opsional)</label>
+                <input type="text" id="client-budget" placeholder="Contoh: Deadline 1 Bulan / Budget 10 - 20 Jt" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+
+              <div>
+                <label for="client-message" class="block text-xs font-semibold text-slate-700 mb-1">Deskripsi Singkat Kebutuhan Anda</label>
+                <textarea id="client-message" rows="4" placeholder="Ceritakan gambaran singkat sistem yang ingin dibangun atau kendala teknis yang sedang dialami..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+              </div>
+
+              <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all text-sm group">
+                <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.947.882 2.796.882 3.183 0 5.769-2.587 5.77-5.768.001-3.181-2.585-5.767-5.77-5.767zm7.521 5.766c-.002 4.148-3.374 7.52-7.521 7.52-.942 0-2.311-.322-3.364-.913l-4.667 1.223 1.246-4.549c-.655-1.127-1.002-2.327-1.001-3.281.002-4.148 3.375-7.52 7.522-7.52 4.148 0 7.52 3.372 7.522 7.52z"/>
+                </svg>
+                Kirim Brief & Buka WhatsApp Sekarang
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm">
+            AN
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm">Mochamad Aziz Noviyanto</p>
+            <p class="text-xs text-slate-500">Full-Stack & Mobile Developer (Sidoarjo, Jawa Timur)</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-600 font-medium">
+          <a href="#tentang" class="hover:text-blue-600">Tentang</a>
+          <a href="#layanan" class="hover:text-blue-600">Layanan</a>
+          <a href="#proyek" class="hover:text-blue-600">Proyek</a>
+          <a href="#keahlian" class="hover:text-blue-600">Keahlian</a>
+          <a href="#pengalaman" class="hover:text-blue-600">Pengalaman</a>
+          <a href="#ketersediaan" class="hover:text-blue-600">Ketersediaan</a>
+          <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+        </div>
+
+        <div class="text-xs text-slate-400 text-center md:text-right">
+          <p>© 2026 Mochamad Aziz Noviyanto. All rights reserved.</p>
+          <p class="text-[11px] text-slate-400 mt-0.5">Designed for GitHub Pages & Freelance Showcases</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL STUDI KASUS -->
+  <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+    <div class="modal-content bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-slate-100 flex items-start justify-between">
+        <div>
+          <span id="modal-role" class="text-xs font-bold text-blue-600 uppercase tracking-wider">Full-Stack Lead</span>
+          <h3 id="modal-title" class="text-xl font-bold text-slate-900 mt-1">Judul Proyek</h3>
+          <p id="modal-client" class="text-xs text-slate-500 mt-0.5">Nama Klien / Perusahaan</p>
+        </div>
+        <button id="modal-close-btn" class="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-5">
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Deskripsi Proyek</h4>
+          <p id="modal-description" class="text-sm text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Teknologi yang Digunakan</h4>
+          <div id="modal-tech" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Pencapaian & Kontribusi Utama</h4>
+          <ul id="modal-highlights" class="space-y-2"></ul>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <span class="text-xs text-slate-500">Ingin membangun sistem serupa?</span>
+        <a href="#kontak" onclick="document.getElementById('modal-close-btn').click()" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+          Diskusikan Sekarang
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl shadow-xl flex items-center space-x-2 border border-slate-700">
+    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-message">Teks berhasil disalin</span>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
