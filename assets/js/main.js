@@ -223,37 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2800);
     }
   };
-
-  // 7. Interactive Profile Photo Toggle (Studio vs Real Cafe)
-  const profileImg = document.getElementById('profile-img');
-  const photoToggleBtn = document.getElementById('photo-toggle-btn');
-  const photoToggleLabel = document.getElementById('photo-toggle-label');
-
-  if (profileImg && photoToggleBtn && photoToggleLabel) {
-    let currentPhoto = 'studio'; // default studio
-    photoToggleBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      if (currentPhoto === 'studio') {
-        profileImg.style.opacity = '0';
-        setTimeout(() => {
-          profileImg.src = 'assets/images/aziz-real.jpg';
-          profileImg.style.opacity = '1';
-          photoToggleLabel.textContent = 'Versi Studio';
-          currentPhoto = 'cafe';
-          showToast('Beralih ke Foto Asli (Cafe Workstation)');
-        }, 150);
-      } else {
-        profileImg.style.opacity = '0';
-        setTimeout(() => {
-          profileImg.src = 'assets/images/aziz-real-studio.jpg';
-          profileImg.style.opacity = '1';
-          photoToggleLabel.textContent = 'Versi Cafe';
-          currentPhoto = 'studio';
-          showToast('Beralih ke Foto Studio Modern');
-        }, 150);
-      }
-    });
-  }
 });
+
 
