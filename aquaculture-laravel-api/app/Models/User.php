@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -24,6 +25,8 @@ class User extends Authenticatable implements FilamentUser
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'role',
         'password',
     ];
 
@@ -52,7 +55,32 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
+        // Semua role terdaftar memiliki akses ke backoffice / mobile panel sesuai wewenangnya
         return true;
+    }
+
+    public function roleLabel(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => match ($this->role) {
+                'admin' => 'Administrator Pusat',
+                'supervisor' => 'Supervisor Kolam',
+                'teknisi_utama' => 'Teknisi Utama Tambak',
+                'asisten_teknisi' => 'Asisten Teknisi Lapangan',
+                'operator_pakan' => 'Operator Pakan Harian',
+                default => ucfirst(str_replace('_', ' ', $this->role ?? 'Teknisi')),
+            }
+        );
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isSupervisor(): bool
+    {
+        return in_array($this->role, ['admin', 'supervisor']);
     }
 
     public function feedingLogs(): HasMany

@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <span class="text-lg font-extrabold tracking-tight text-white">NagroSmart</span>
-                    <span class="text-xs ml-1.5 px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/30 font-medium">AquaFarm v1.0</span>
+                    <span class="text-xs ml-1.5 px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/30 font-medium">AquaFarm v1.1</span>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
         <div class="text-center max-w-3xl mx-auto">
             <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 text-xs mb-6">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Laravel 11 • Filament v3 • Sanctum API • Flutter Ready</span>
+                <span>Laravel 11 • Filament v3 • Sanctum API • 5 Role Operasional</span>
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
@@ -84,31 +84,85 @@
             </div>
         </div>
 
-        <!-- Demo Credentials Callout -->
-        <div class="mt-12 max-w-2xl mx-auto p-5 rounded-2xl bg-slate-900/90 border border-teal-500/30 shadow-xl backdrop-blur-sm">
-            <div class="flex items-start space-x-3">
-                <div class="p-2 rounded-lg bg-teal-500/20 text-teal-400">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
-                </div>
-                <div class="flex-1 text-sm">
-                    <h3 class="font-bold text-white text-base">Kredensial Akun Demo (Filament & API)</h3>
-                    <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-300">
-                        <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-                            <span class="text-xs text-teal-400 font-semibold block uppercase">Farm Admin</span>
-                            <span class="font-mono text-xs block text-slate-200">admin@aquafarm.test</span>
-                            <span class="font-mono text-xs block text-slate-400">password: <strong class="text-white">password</strong></span>
-                        </div>
-                        <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-                            <span class="text-xs text-sky-400 font-semibold block uppercase">Field Technician</span>
-                            <span class="font-mono text-xs block text-slate-200">teknisi@aquafarm.test</span>
-                            <span class="font-mono text-xs block text-slate-400">password: <strong class="text-white">password</strong></span>
-                        </div>
+        <!-- Demo Credentials Callout (5 Roles) -->
+        <div class="mt-12 max-w-4xl mx-auto p-6 rounded-2xl bg-slate-900/90 border border-teal-500/30 shadow-2xl backdrop-blur-sm">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl">👥</span>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Kredensial Akun Demo (5 Role Lapangan)</h3>
+                        <p class="text-xs text-slate-400">Gunakan akun di bawah ini untuk mencoba login di Filament maupun API Mobile (Password semua akun: <strong class="text-white">password</strong>)</p>
                     </div>
+                </div>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-medium">Ready to Test</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <!-- Admin -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-red-500/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-red-400 font-bold uppercase tracking-wider">Admin Pusat</span>
+                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                    </div>
+                    <span class="font-semibold text-xs text-slate-200 block mt-1">Mochamad Aziz N.</span>
+                    <span class="font-mono text-xs block text-slate-400 mt-1">admin@aquafarm.test</span>
+                    <span class="text-[11px] text-slate-500 block mt-1">Akses penuh sistem & kelola pengguna</span>
+                </div>
+
+                <!-- Supervisor -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-blue-500/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Supervisor Kolam</span>
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                    </div>
+                    <span class="font-semibold text-xs text-slate-200 block mt-1">Hendra Wijaya, S.Pi</span>
+                    <span class="font-mono text-xs block text-slate-400 mt-1">supervisor@aquafarm.test</span>
+                    <span class="text-[11px] text-slate-500 block mt-1">Monitoring blok & approval siklus</span>
+                </div>
+
+                <!-- Teknisi Utama -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-teal-500/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-teal-400 font-bold uppercase tracking-wider">Teknisi Utama</span>
+                        <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                    </div>
+                    <span class="font-semibold text-xs text-slate-200 block mt-1">Budi Santoso</span>
+                    <span class="font-mono text-xs block text-slate-400 mt-1">teknisi@aquafarm.test</span>
+                    <span class="text-[11px] text-slate-500 block mt-1">Analisis parameter air & resep pakan</span>
+                </div>
+
+                <!-- Asisten Teknisi -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-sky-500/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-sky-400 font-bold uppercase tracking-wider">Asisten Teknisi</span>
+                        <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                    </div>
+                    <span class="font-semibold text-xs text-slate-200 block mt-1">Joko Prasetyo</span>
+                    <span class="font-mono text-xs block text-slate-400 mt-1">asisten@aquafarm.test</span>
+                    <span class="text-[11px] text-slate-500 block mt-1">Pengecekan sensor air pagi & DO</span>
+                </div>
+
+                <!-- Operator Pakan -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-amber-500/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Operator Pakan</span>
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    </div>
+                    <span class="font-semibold text-xs text-slate-200 block mt-1">Dimas Saputra</span>
+                    <span class="font-mono text-xs block text-slate-400 mt-1">operator@aquafarm.test</span>
+                    <span class="text-[11px] text-slate-500 block mt-1">Input pakan 4x harian & cek anco</span>
+                </div>
+
+                <!-- Live Test API Card -->
+                <div class="p-3 bg-slate-950 rounded-xl border border-dashed border-slate-700 flex flex-col justify-center text-center">
+                    <span class="text-xs text-slate-400">Kombinasi Password:</span>
+                    <span class="font-mono text-xs font-bold text-white bg-slate-900 py-1 px-2 rounded mt-1">password</span>
+                    <span class="text-[10px] text-slate-500 mt-1">Berlaku untuk semua akun di atas</span>
                 </div>
             </div>
         </div>
 
-        <!-- System Architecture Highlights -->
+        <!-- System Highlights -->
         <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-4">
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800/80">
                 <div class="text-3xl font-extrabold text-teal-400">5</div>
@@ -150,7 +204,7 @@
                         <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-bold">POST</span>
                         <span class="text-slate-300">/api/v1/auth/login</span>
                     </div>
-                    <span class="text-slate-500 text-[11px]">Kirim email & password, mengembalikan auth token</span>
+                    <span class="text-slate-500 text-[11px]">Kirim email & password, mengembalikan auth token + role</span>
                 </div>
 
                 <div class="flex items-center justify-between p-3 rounded-lg bg-slate-950 border border-slate-800">

@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: nagrosmart-aquaculture-backend
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_NAME
+        value: "NagroSmart AquaFarm"
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_TIMEZONE
+        value: Asia/Jakarta
+      - key: DB_CONNECTION
+        value: sqlite

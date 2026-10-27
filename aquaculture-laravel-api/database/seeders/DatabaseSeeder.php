@@ -18,24 +18,59 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // 1. Users
-        $admin = User::firstOrCreate(
-            ['email' => 'admin@aquafarm.test'],
+        // 1. Users dengan 5 Role Operasional Tambak Lengkap (NagroSmart Standard)
+        $usersData = [
             [
+                'email' => 'admin@aquafarm.test',
                 'name' => 'Mochamad Aziz Noviyanto',
-                'password' => Hash::make('password'),
-                'email_verified_at' => now(),
-            ]
-        );
-
-        $tech = User::firstOrCreate(
-            ['email' => 'teknisi@aquafarm.test'],
+                'phone' => '081335520436',
+                'role' => 'admin',
+            ],
             [
-                'name' => 'Budi Santoso (Field Tech)',
-                'password' => Hash::make('password'),
-                'email_verified_at' => now(),
-            ]
-        );
+                'email' => 'supervisor@aquafarm.test',
+                'name' => 'Hendra Wijaya, S.Pi',
+                'phone' => '081234567801',
+                'role' => 'supervisor',
+            ],
+            [
+                'email' => 'teknisi@aquafarm.test',
+                'name' => 'Budi Santoso',
+                'phone' => '081234567802',
+                'role' => 'teknisi_utama',
+            ],
+            [
+                'email' => 'asisten@aquafarm.test',
+                'name' => 'Joko Prasetyo',
+                'phone' => '081234567803',
+                'role' => 'asisten_teknisi',
+            ],
+            [
+                'email' => 'operator@aquafarm.test',
+                'name' => 'Dimas Saputra',
+                'phone' => '081234567804',
+                'role' => 'operator_pakan',
+            ],
+        ];
+
+        $users = [];
+        foreach ($usersData as $u) {
+            $users[$u['role']] = User::updateOrCreate(
+                ['email' => $u['email']],
+                [
+                    'name' => $u['name'],
+                    'phone' => $u['phone'],
+                    'role' => $u['role'],
+                    'password' => Hash::make('password'),
+                    'email_verified_at' => now(),
+                ]
+            );
+        }
+
+        $admin = $users['admin'];
+        $supervisor = $users['supervisor'];
+        $leadTech = $users['teknisi_utama'];
+        $fieldAsst = $users['asisten_teknisi'];
+        $feedOperator = $users['operator_pakan'];
 
         // 2. Ponds (5 Kolam)
         $pondsData = [
@@ -108,10 +143,10 @@ class DatabaseSeeder extends Seeder
 
         $ponds = [];
         foreach ($pondsData as $data) {
-            $ponds[] = Pond::create($data);
+            $ponds[] = Pond::updateOrCreate(['code' => $data['code']], $data);
         }
 
-        // 3. Cycles untuk kolam yang active (Pond 0, 1, 2, 3)
+        // 3. Cycles untuk kolam yang active
         $cyclesConfig = [
             [
                 'pond_id' => $ponds[0]->id,
@@ -169,31 +204,33 @@ class DatabaseSeeder extends Seeder
             $startDate = $today->copy()->subDays($config['days_ago']);
             $targetHarvest = $startDate->copy()->addDays(90);
 
-            $cycle = Cycle::create([
-                'pond_id' => $config['pond_id'],
-                'cycle_code' => $config['cycle_code'],
-                'species' => $config['species'],
-                'start_date' => $startDate->toDateString(),
-                'target_harvest_date' => $targetHarvest->toDateString(),
-                'initial_population' => $config['initial_population'],
-                'target_fcr' => $config['target_fcr'],
-                'target_size' => $config['target_size'],
-                'status' => $config['status'],
-                'notes' => $config['notes'],
-            ]);
+            $cycle = Cycle::updateOrCreate(
+                ['cycle_code' => $config['cycle_code']],
+                [
+                    'pond_id' => $config['pond_id'],
+                    'species' => $config['species'],
+                    'start_date' => $startDate->toDateString(),
+                    'target_harvest_date' => $targetHarvest->toDateString(),
+                    'initial_population' => $config['initial_population'],
+                    'target_fcr' => $config['target_fcr'],
+                    'target_size' => $config['target_size'],
+                    'status' => $config['status'],
+                    'notes' => $config['notes'],
+                ]
+            );
 
-            // 4. Feeding Logs selama 30 hari terakhir
-            // Setiap hari 4 jadwal pakan
+            // Bersihkan feeding logs lama siklus ini agar tidak duplikat saat re-seed
+            $cycle->feedingLogs()->delete();
+
+            // 4. Feeding Logs 30 hari terakhir (Dicatat oleh Operator Pakan & Teknisi)
             for ($d = 29; $d >= 0; $d--) {
                 $feedDate = $today->copy()->subDays($d);
                 $doc = $startDate->diffInDays($feedDate) + 1;
 
-                // Hitung takaran pakan naik bertahap sesuai DOC
                 $baseFeedKg = 3.5 + ($doc * 0.22) + (rand(-10, 15) / 10.0);
                 $baseFeedKg = max(2.0, round($baseFeedKg, 2));
 
                 foreach ($feedingTimeSlots as $idx => $slot) {
-                    // Porsi sore/malam biasanya sedikit lebih banyak
                     $slotMultiplier = match ($slot) {
                         '07:00' => 0.85,
                         '11:00' => 0.95,
@@ -202,8 +239,15 @@ class DatabaseSeeder extends Seeder
                         default => 1.0,
                     };
                     $feedAmount = round($baseFeedKg * $slotMultiplier, 2);
-
                     $appetite = $appetiteOptions[array_rand($appetiteOptions)];
+
+                    // Jam 07:00 dan 11:00 dicatat Operator Pakan, sore/malam diawasi Teknisi/Supervisor
+                    $recorderId = match ($idx) {
+                        0, 1 => $feedOperator->id,
+                        2 => $leadTech->id,
+                        3 => $fieldAsst->id,
+                        default => $leadTech->id,
+                    };
 
                     FeedingLog::create([
                         'cycle_id' => $cycle->id,
@@ -213,21 +257,22 @@ class DatabaseSeeder extends Seeder
                         'doc' => (int) $doc,
                         'amount_kg' => $feedAmount,
                         'appetite_rate' => $appetite,
-                        'recorded_by' => ($idx % 2 === 0) ? $tech->id : $admin->id,
+                        'recorded_by' => $recorderId,
                         'notes' => $appetite === 'remaining_feed' ? 'Anco sisa 10%, kurangi porsi berikutnya 1kg.' : null,
                     ]);
                 }
             }
         }
 
-        // 5. Water Quality Logs untuk SEMUA 5 Kolam (selama 30 hari terakhir, pagi & sore)
+        // 5. Water Quality Logs untuk SEMUA 5 Kolam (selama 30 hari terakhir)
         foreach ($ponds as $pond) {
             $activeCycle = $pond->activeCycle;
+            $pond->waterQualityLogs()->delete();
 
             for ($d = 29; $d >= 0; $d--) {
                 $logDate = $today->copy()->subDays($d);
 
-                // Morning Reading (06:30 - suhu lebih dingin, DO lebih rendah sebelum fotosintesis)
+                // Morning Reading (Pagi dicatat oleh Asisten Teknisi)
                 $morningTemp = round(27.0 + (rand(0, 15) / 10.0), 2);
                 $morningPh = round(7.60 + (rand(0, 40) / 100.0), 2);
                 $morningDo = round(4.80 + (rand(0, 18) / 10.0), 2);
@@ -253,11 +298,11 @@ class DatabaseSeeder extends Seeder
                     'ammonia' => $ammonia,
                     'alkalinity' => $alkalinity,
                     'condition_status' => $morningStatus,
-                    'recorded_by' => $tech->id,
+                    'recorded_by' => $fieldAsst->id,
                     'notes' => $morningStatus === 'warning' ? 'Aerasi kincir ditambah 1 unit di area outlet.' : null,
                 ]);
 
-                // Afternoon Reading (16:30 - suhu lebih hangat, DO tinggi karena fotosintesis fitoplankton)
+                // Afternoon Reading (Sore diverifikasi oleh Teknisi Utama)
                 $afternoonTemp = round(29.5 + (rand(0, 20) / 10.0), 2);
                 $afternoonPh = round(8.10 + (rand(0, 30) / 100.0), 2);
                 $afternoonDo = round(6.50 + (rand(0, 20) / 10.0), 2);
@@ -279,7 +324,7 @@ class DatabaseSeeder extends Seeder
                     'ammonia' => $ammonia,
                     'alkalinity' => $alkalinity,
                     'condition_status' => $afternoonStatus,
-                    'recorded_by' => $admin->id,
+                    'recorded_by' => $leadTech->id,
                     'notes' => 'Pemeriksaan sore hari, kincir stabil.',
                 ]);
             }

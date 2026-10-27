@@ -111,3 +111,4 @@ class FeedingLogController extends Controller
         ], 'Ringkasan konsumsi pakan berhasil diambil');
     }
 }
+

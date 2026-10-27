@@ -57,3 +57,4 @@ class AquacultureStatsOverview extends BaseWidget
         ];
     }
 }
+

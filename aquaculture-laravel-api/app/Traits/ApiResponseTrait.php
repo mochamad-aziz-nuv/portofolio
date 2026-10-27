@@ -35,3 +35,4 @@ trait ApiResponseTrait
         return response()->json($response, $code);
     }
 }
+

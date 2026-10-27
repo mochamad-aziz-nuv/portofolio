@@ -112,3 +112,4 @@ class CycleController extends Controller
         ], 'Ringkasan analitik siklus budidaya berhasil diambil');
     }
 }
+

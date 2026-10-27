@@ -29,19 +29,13 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . .
 
-# Install PHP dependencies
+# Beri izin eksekusi script entrypoint
+RUN chmod +x docker-entrypoint.sh
+
+# Install Composer dependencies (production optimize)
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Create SQLite database if not present
-RUN touch database/database.sqlite \
-    && chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 storage bootstrap/cache database
-
-# Environment setup
 ENV PORT=8000
 EXPOSE 8000
 
-# Entrypoint script: migrate & run server
-CMD php artisan key:generate --force \
-    && php artisan migrate --force --seed \
-    && php artisan serve --host=0.0.0.0 --port=${PORT}
+ENTRYPOINT ["./docker-entrypoint.sh"]

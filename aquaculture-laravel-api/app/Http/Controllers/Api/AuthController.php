@@ -58,3 +58,4 @@ class AuthController extends Controller
         return $this->sendResponse(null, 'Berhasil logout dan token dicabut');
     }
 }
+

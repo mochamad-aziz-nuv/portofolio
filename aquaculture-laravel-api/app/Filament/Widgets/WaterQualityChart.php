@@ -66,3 +66,4 @@ class WaterQualityChart extends ChartWidget
         return 'line';
     }
 }
+
