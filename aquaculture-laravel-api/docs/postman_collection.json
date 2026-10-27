@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "nagrosmart-aquaculture-api-v1",
+		"name": "NagroSmart AquaFarm API",
+		"description": "RESTful API untuk Smart Aquaculture & Farm Monitoring System (Laravel 11 + Sanctum)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"if(jsonData.data && jsonData.data.token) {",
+									"    pm.environment.set('token', jsonData.data.token);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Content-Type", "value": "application/json"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@aquafarm.test\",\n    \"password\": \"password\",\n    \"device_name\": \"Postman Collection Test\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/login",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "login"]
+						}
+					}
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/me",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "me"]
+						}
+					}
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/logout",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "logout"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Ponds (Kolam)",
+			"item": [
+				{
+					"name": "List All Ponds",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/ponds",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "ponds"]
+						}
+					}
+				},
+				{
+					"name": "Get Pond Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/ponds/1",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "ponds", "1"]
+						}
+					}
+				},
+				{
+					"name": "Create Pond",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Kolam Baru C2 (Intensif)\",\n    \"code\": \"PL-C2\",\n    \"pond_type\": \"hdpe\",\n    \"length_m\": 25,\n    \"width_m\": 25,\n    \"depth_m\": 1.3,\n    \"area_sqm\": 625,\n    \"status\": \"preparation\",\n    \"location\": \"Blok Timur No. 02\",\n    \"notes\": \"Kolam ekspansi tahap 2\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/ponds",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "ponds"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Cycles (Siklus)",
+			"item": [
+				{
+					"name": "List Cycles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/cycles?status=active",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "cycles"],
+							"query": [{"key": "status", "value": "active"}]
+						}
+					}
+				},
+				{
+					"name": "Get Cycle Summary & Analytics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/cycles/1/summary",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "cycles", "1", "summary"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Feeding Logs",
+			"item": [
+				{
+					"name": "List Feeding Logs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/feeding-logs?cycle_id=1",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "feeding-logs"],
+							"query": [{"key": "cycle_id", "value": "1"}]
+						}
+					}
+				},
+				{
+					"name": "Record Feeding Log",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cycle_id\": 1,\n    \"feed_brand\": \"Megami #2\",\n    \"feeding_date\": \"2026-10-27\",\n    \"feeding_time\": \"11:00\",\n    \"amount_kg\": 12.5,\n    \"appetite_rate\": \"optimal\",\n    \"notes\": \"Nafsu makan bagus, anco bersih total.\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/feeding-logs",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "feeding-logs"]
+						}
+					}
+				},
+				{
+					"name": "Feeding Summary (Last 7 Days)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/feeding-logs/summary?days=7",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "feeding-logs", "summary"],
+							"query": [{"key": "days", "value": "7"}]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Water Quality Logs",
+			"item": [
+				{
+					"name": "Get Latest Water Quality (All Ponds)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/water-quality-logs/latest",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "water-quality-logs", "latest"]
+						}
+					}
+				},
+				{
+					"name": "Record Water Quality Reading",
+					"request": {
+						"method": "POST",
+						"header": [
+							{"key": "Accept", "value": "application/json"},
+							{"key": "Content-Type", "value": "application/json"},
+							{"key": "Authorization", "value": "Bearer {{token}}"}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pond_id\": 1,\n    \"temperature\": 29.5,\n    \"ph\": 7.85,\n    \"dissolved_oxygen\": 6.2,\n    \"salinity\": 22.0,\n    \"turbidity\": 35.0,\n    \"ammonia\": 0.02,\n    \"notes\": \"Kondisi air optimal, warna hijau kecokelatan stabil.\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/water-quality-logs",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "water-quality-logs"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8000"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

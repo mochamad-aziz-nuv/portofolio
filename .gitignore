@@ -1,0 +1,31 @@
+# Dependencies
+**/vendor/
+**/node_modules/
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Laravel SQLite database (can be kept in git if desired, but best excluded or created fresh)
+**/database/database.sqlite
+**/database/database.sqlite-journal
+
+# Laravel storage & caches
+**/storage/*.key
+**/storage/pail
+**/storage/logs/*.log
+**/storage/framework/cache/data/*
+**/storage/framework/sessions/*
+**/storage/framework/views/*
+**/storage/app/public/*
+**/public/storage
+
+# Testing & tool caches
+**/.phpunit.cache
+**/.phpunit.result.cache
+
+# macOS & Editor
+.DS_Store
+.idea/
+.vscode/
